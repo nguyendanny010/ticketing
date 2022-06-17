@@ -18,16 +18,16 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/ticketing-dev-339801/ticketing-client
-      context: client
+    - image: us.gcr.io/ticketing-dev-339801/tickets
+      context: tickets
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: '**/*.js'
+          - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/ticketing-dev-339801/tickets
-      context: tickets
+    - image: us.gcr.io/ticketing-dev-339801/orders
+      context: orders
       docker:
         dockerfile: Dockerfile
       sync:
